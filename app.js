@@ -1,6 +1,10 @@
 import express from "express";
 import http from "http";
 import { Server } from "socket.io";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 
 const PORT = 3000;
@@ -16,7 +20,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/esp32", (req, res) => {
-  res.sendFile("./src/ui/index.html");
+  res.sendFile(path.join(__dirname, '/index.html'));
+  
 });
 
 

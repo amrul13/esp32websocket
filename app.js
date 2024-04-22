@@ -7,8 +7,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 
-const PORT = 3000;
-
+const port = process.env.PORT || 3000;
 const app = express();
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, { });
@@ -43,6 +42,6 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(3000, () => {
+httpServer.listen(port, "0.0.0.0", () => {
   console.log(`Server is running on port 3000`);
 });

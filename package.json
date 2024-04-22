@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "nodemon app.js",
-        "start": "node app.js",
-        "deploy": "git push heroku main"
+        "start": "node index.js"
     },
     "keywords": [],
     "author": "",

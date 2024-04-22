@@ -11,6 +11,15 @@ const io = new Server(httpServer, { cors: { origin: "*" } });
 
 app.use(express.static("src/ui"));
 
+app.get("/", (req, res) => {
+  res.send("Hello, this is the root route!");
+});
+
+app.get("/esp32", (req, res) => {
+  res.sendFile("./src/ui/index.html");
+});
+
+
 let buttonState = false;
 
 io.on("connection", (socket) => {

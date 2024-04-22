@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/esp32", (req, res) => {
-  res.sendFile(path.join(__dirname, '/index.html'));
+  res.sendFile(path.join(__dirname, "/src/ui/index.html"));
   
 });
 

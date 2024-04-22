@@ -11,7 +11,7 @@ const PORT = 3000;
 
 const app = express();
 const httpServer = http.createServer(app);
-const io = new Server(httpServer, { cors: { origin: "*" } });
+const io = new Server(httpServer, { });
 
 app.use(express.static(__dirname +"/src/ui"));
 

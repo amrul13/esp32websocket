@@ -9,7 +9,7 @@ const app = express();
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, { cors: { origin: "*" } });
 
-app.use(express.static("src/ui"));
+app.use(express.static("./src/ui"));
 
 app.get("/", (req, res) => {
   res.send("Hello, this is the root route!");

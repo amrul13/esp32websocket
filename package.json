@@ -2,10 +2,10 @@
     "name": "esp-socket",
     "version": "1.0.0",
     "description": "",
-    "main": "src/app.js",
+    "main": "index.js",
     "scripts": {
         "dev": "nodemon app.js",
-        "start": "node inex.js",
+        "start": "node index.js",
         "deploy": "git push heroku main"
     },
     "keywords": [],
